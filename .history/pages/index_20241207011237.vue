@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-06 13:58:01
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 01:18:33
+ * @LastEditTime: 2024-12-07 01:12:37
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
@@ -53,13 +53,12 @@
 
 <script setup>
 import TheNavbar from '~/components/layout/TheNavbar.vue'
-import { navMenus } from '~/constants/navigation.js'
 </script>
 
 <style scoped>
 /* 保留除导航栏以外的所有样式 */
 .hero-section {
-  background: linear-gradient(180deg, rgb(13, 17, 54) 0%, rgb(58, 45, 113) 100%);
+  background: linear-gradient(180deg, #040d21 0%, #0c162d 100%);
   padding: 80px 16px;
   min-height: calc(100vh - 64px);
   display: flex;
