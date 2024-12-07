@@ -2,14 +2,16 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 00:30:48
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 00:47:43
+ * @LastEditTime: 2024-12-07 16:45:30
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
   <nav class="main-nav">
     <div class="nav-content">
       <div class="left-nav">
-        <img src="/images/githublogo.png" alt="Logo" class="logo" />
+        <nuxt-link to="/">
+          <img src="/images/githublogo.png" alt="Logo" class="logo" />
+        </nuxt-link>
         <UDropdown
           v-for="menu in navMenus"
           :key="menu.label"
@@ -27,66 +29,46 @@
             trailing-icon="i-heroicons-chevron-down-20-solid"
           />
         </UDropdown>
-      </div>
-      <div class="right-nav">
-        <UButton variant="ghost" class="sign-in-button" label="登录" />
         <UButton
           variant="solid"
-          color="primary"
-          class="sign-up-button"
-          label="注册"
+          class="nav-button"
+          label="关于"
+          @click="$router.push('/about')"
         />
+      </div>
+      <div class="right-nav">
+        <nuxt-link to="/login" class="sign-in-button">登录</nuxt-link>
+        <nuxt-link to="/reg" class="sign-up-button">注册</nuxt-link>
       </div>
     </div>
   </nav>
 </template>
 
 <script setup>
-import { navMenus } from '~/constants/navigation'
+import { navMenus } from "~/constants/navigation";
 </script>
 
 <style scoped>
-/* 导航栏相关样式 */
-.main-nav {
-  background: #24292f;
-  color: #fff;
-  padding: 1rem;
-}
-
-.nav-content {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.left-nav {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.logo {
-  height: 40px;
-}
-
+/* 移除通用样式，保留特定样式 */
 .right-nav {
   display: flex;
   gap: 8px;
   align-items: center;
 }
 
-/* 导航按钮样式 */
-.nav-button {
-  background-color: transparent !important;
+.sign-in-button,
+.sign-up-button {
   color: white !important;
-  border: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
   font-size: 18px !important;
-  padding: 8px 16px !important;
+  padding: 5px 12px !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  background-color: transparent !important;
 }
 
-.nav-button:hover {
+.sign-in-button:hover,
+.sign-up-button:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -106,26 +88,6 @@ import { navMenus } from '~/constants/navigation'
 :deep(.github-dropdown .u-dropdown-item:hover) {
   background-color: #f6f8fa !important;
   color: #24292f !important;
-}
-
-/* 登录注册按钮样式 */
-.sign-in-button {
-  color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  font-size: 18px !important;
-  padding: 5px 12px !important;
-  border-radius: 6px !important;
-  font-weight: 500 !important;
-}
-
-.sign-up-button {
-  background-color: white !important;
-  color: #24292f !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  font-size: 18px !important;
-  padding: 5px 12px !important;
-  border-radius: 6px !important;
-  font-weight: 500 !important;
 }
 
 /* 响应式设计 */

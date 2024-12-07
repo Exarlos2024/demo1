@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-06 14:02:09
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 01:41:50
+ * @LastEditTime: 2024-12-07 13:54:50
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <!--
@@ -22,25 +22,20 @@
       <p>欢迎来到测试页面</p>
       <TheNavbar />
       <button class="btn" @click="handleClick">点击我</button>
-      <button class="home-btn" @click="goToHome">返回主页</button>
+      <nuxt-link to="/" class="home-btn">返回主页</nuxt-link>
     </div>
   </div>
 </template>
 
 <script setup>
 import TheNavbar from '~/components/layout/TheNavbar.vue'
-import { useRouter } from 'vue-router'
 
-const router = useRouter()
 
 // 添加响应式数据和方法
 const handleClick = () => {
   console.log('按钮被点击了！')
 }
 
-const goToHome = () => {
-  router.push('/')
-}
 </script>
 
 <style scoped>

@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 01:05:47
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 12:45:45
+ * @LastEditTime: 2024-12-07 13:03:02
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 
@@ -56,16 +56,16 @@
           <div class="globe"></div>
         </div>
       </div>
-      
+
       <div class="hero-container">
         <h1 class="hero-title">
-          大连市甘井子区卫生健康局<br>
+          大连市甘井子区卫生健康局<br />
           信息化办公平台
         </h1>
         <p class="hero-description">
           Join the world's most widely adopted AI-powered developer platform.
         </p>
-        
+
         <!-- 添加 CTA 按钮 -->
         <div class="hero-cta">
           <UButton
@@ -404,7 +404,11 @@ li:hover {
   right: 0;
   bottom: 0;
   overflow: hidden;
-  background: linear-gradient(180deg, rgb(13, 17, 54) 0%, rgb(58, 45, 113) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(13, 17, 54) 0%,
+    rgb(58, 45, 113) 100%
+  );
 }
 
 .star-field {
@@ -427,34 +431,22 @@ li:hover {
 .star-field .small {
   width: 1px;
   height: 1px;
-  box-shadow: 
-    10vw 10vh #fff,
-    20vw 20vh #fff,
-    30vw 30vh #fff,
-    /* 添加更多星星位置 */
-    90vw 90vh #fff;
+  box-shadow: 10vw 10vh #fff, 20vw 20vh #fff, 30vw 30vh #fff,
+    /* 添加更多星星位置 */ 90vw 90vh #fff;
 }
 
 .star-field .medium {
   width: 2px;
   height: 2px;
-  box-shadow: 
-    15vw 15vh #fff,
-    25vw 25vh #fff,
-    35vw 35vh #fff,
-    /* 添加更多星星位置 */
-    85vw 85vh #fff;
+  box-shadow: 15vw 15vh #fff, 25vw 25vh #fff, 35vw 35vh #fff,
+    /* 添加更多星星位置 */ 85vw 85vh #fff;
 }
 
 .star-field .large {
   width: 3px;
   height: 3px;
-  box-shadow: 
-    5vw 5vh #fff,
-    45vw 45vh #fff,
-    75vw 75vh #fff,
-    /* 添加更多星星位置 */
-    95vw 95vh #fff;
+  box-shadow: 5vw 5vh #fff, 45vw 45vh #fff, 75vw 75vh #fff,
+    /* 添加更多星星位置 */ 95vw 95vh #fff;
 }
 
 /* 地球效果 */
@@ -472,9 +464,11 @@ li:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, 
+  background: radial-gradient(
+    circle at center,
     rgba(100, 200, 255, 0.1) 0%,
-    rgba(100, 200, 255, 0) 70%);
+    rgba(100, 200, 255, 0) 70%
+  );
   border-radius: 50%;
   animation: rotate 20s linear infinite;
 }
@@ -554,18 +548,32 @@ li:hover {
 
 /* 动画关键帧 */
 @keyframes twinkle {
-  0%, 100% { opacity: 0.8; }
-  50% { opacity: 0.4; }
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes titleGlow {
-  0%, 100% { filter: brightness(1); }
-  50% { filter: brightness(1.2); }
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
 }
 
 /* 响应式设计 */
@@ -573,11 +581,11 @@ li:hover {
   .hero-title {
     font-size: 48px;
   }
-  
+
   .hero-description {
     font-size: 20px;
   }
-  
+
   .hero-cta {
     flex-direction: column;
     padding: 0 20px;
@@ -588,7 +596,7 @@ li:hover {
   .hero-title {
     font-size: 32px;
   }
-  
+
   .hero-description {
     font-size: 18px;
   }

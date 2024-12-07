@@ -1,3 +1,10 @@
+/*
+ * @Author: Exarlos
+ * @Date: 2024-12-05 15:36:51
+ * @LastEditors: Exarlos
+ * @LastEditTime: 2024-12-07 14:25:51
+ * @Description: 世界上没有低级的法术,只有低级的法师!
+ */
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
@@ -9,5 +16,8 @@ export default defineNuxtConfig({
       '~/components/layout',
       '~/components/home'
     ]
-  }
+  },
+  css: [
+    '~/assets/global.css'
+  ]
 })
