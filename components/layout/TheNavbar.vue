@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 00:30:48
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 16:45:30
+ * @LastEditTime: 2024-12-07 23:38:21
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
@@ -32,8 +32,14 @@
         <UButton
           variant="solid"
           class="nav-button"
-          label="关于"
+          label=" 关于"
           @click="$router.push('/about')"
+        />
+        <UButton
+          variant="solid"
+          class="nav-button"
+          label="常用链接"
+          @click="$router.push('/links')"
         />
       </div>
       <div class="right-nav">

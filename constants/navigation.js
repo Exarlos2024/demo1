@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 00:31:43
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 16:44:16
+ * @LastEditTime: 2024-12-07 23:55:51
  * @Description: 世界上没有低级的法术,只有低级的法师!
  */
 export const navMenus = [

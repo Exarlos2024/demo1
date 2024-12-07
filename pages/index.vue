@@ -14,6 +14,7 @@
 </template>
 
 <script setup>
+
 import DefaultLayout from '~/components/layout/DefaultLayout.vue'
 import HeroBackground from '~/components/HeroBackground.vue'
 import HeroSection from '~/components/HeroSection.vue'

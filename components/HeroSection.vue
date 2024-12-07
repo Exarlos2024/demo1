@@ -15,7 +15,7 @@
         信息化办公平台
       </h1>
       <p class="hero-description">
-        Join the world's most widely adopted AI-powered developer platform.
+        Think different
       </p>
       
       <!-- 引入 CTA 按钮组件 -->
