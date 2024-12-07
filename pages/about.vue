@@ -2,23 +2,25 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 13:46:29
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 17:17:25
+ * @LastEditTime: 2024-12-07 18:55:23
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
-  <div>
-    <TheNavbar />
+  <DefaultLayout>
     <div class="about-container">
       <h1>关于我</h1>
-      <p>“世上没有低级的法术，只有低级的法师。” 
-        <br><span class="quote-author">—— 《底牌》</span></p>
+      <p>
+        "世上没有低级的法术，只有低级的法师。" <br /><span class="quote-author"
+          >—— 《底牌》</span
+        >
+      </p>
       <nuxt-link to="/" class="back-home-button">回到主页</nuxt-link>
     </div>
-  </div>
+  </DefaultLayout>
 </template>
 
 <script setup>
-import TheNavbar from '~/components/layout/TheNavbar.vue'
+import DefaultLayout from "~/components/layout/DefaultLayout.vue";
 </script>
 
 <style scoped>
@@ -64,4 +66,4 @@ p {
   background-color: #3b3f45;
   transform: translateY(-2px);
 }
-</style> 
+</style>

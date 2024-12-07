@@ -2,36 +2,37 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 13:29:24
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 14:51:51
+ * @LastEditTime: 2024-12-07 18:52:29
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
-  <div class="register-page">
-    <TheRegNavbar />
-    <div class="form-container">
-      <h2 class="form-title">注册</h2>
-      <form @submit.prevent="handleSubmit">
-        <div class="form-group">
-          <label for="username">用户名</label>
-          <input type="text" id="username" v-model="form.username" required />
-        </div>
-        <div class="form-group">
-          <label for="email">邮箱</label>
-          <input type="email" id="email" v-model="form.email" required />
-        </div>
-        <div class="form-group">
-          <label for="password">密码</label>
-          <input type="password" id="password" v-model="form.password" required />
-        </div>
-        <button type="submit" class="submit-button">注册</button>
-      </form>
+  <DefaultLayout>
+    <div class="register-page">
+      <div class="form-container">
+        <h2 class="form-title">注册</h2>
+        <form @submit.prevent="handleSubmit">
+          <div class="form-group">
+            <label for="username">用户名</label>
+            <input type="text" id="username" v-model="form.username" required />
+          </div>
+          <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="email" id="email" v-model="form.email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">密码</label>
+            <input type="password" id="password" v-model="form.password" required />
+          </div>
+          <button type="submit" class="submit-button">注册</button>
+        </form>
+      </div>
     </div>
-  </div>
+  </DefaultLayout>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import TheRegNavbar from '~/components/layout/TheRegNavbar.vue'
+import DefaultLayout from '~/components/layout/DefaultLayout.vue'
 
 const form = ref({
   username: '',
@@ -50,19 +51,26 @@ const handleSubmit = () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100%;
   background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .form-container {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   width: 100%;
-  margin-top: 20px;
+  margin: 20px;
   backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
 }
 
 .form-title {

@@ -2,40 +2,41 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 14:30:06
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 14:51:08
+ * @LastEditTime: 2024-12-07 18:56:05
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
-  <div class="login-page">
-    <TheLoginNavbar />
-    <div class="form-container">
-      <h2 class="form-title">登录</h2>
-      <form @submit.prevent="handleLogin">
-        <div class="form-group">
-          <label for="email">邮箱</label>
-          <input type="email" id="email" v-model="form.email" required />
-        </div>
-        <div class="form-group">
-          <label for="password">密码</label>
-          <input type="password" id="password" v-model="form.password" required />
-        </div>
-        <button type="submit" class="submit-button">登录</button>
-      </form>
+  <DefaultLayout>
+    <div class="login-page">
+      <div class="form-container">
+        <h2 class="form-title">登录</h2>
+        <form @submit.prevent="handleSubmit">
+          <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="email" id="email" v-model="form.email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">密码</label>
+            <input type="password" id="password" v-model="form.password" required />
+          </div>
+          <button type="submit" class="submit-button">登录</button>
+        </form>
+      </div>
     </div>
-  </div>
+  </DefaultLayout>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import TheLoginNavbar from '~/components/layout/TheLoginNavbar.vue'
+import DefaultLayout from '~/components/layout/DefaultLayout.vue'
 
 const form = ref({
   email: '',
   password: ''
 })
 
-const handleLogin = () => {
-  console.log('提交的登录数据:', form.value)
+const handleSubmit = () => {
+  console.log('提交的表单数据:', form.value)
 }
 </script>
 
@@ -45,19 +46,26 @@ const handleLogin = () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  min-height: 100%;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .form-container {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   width: 100%;
-  margin-top: 20px;
+  margin: 20px;
   backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
 }
 
 .form-title {
