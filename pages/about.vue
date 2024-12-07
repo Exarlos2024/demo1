@@ -2,15 +2,16 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 13:46:29
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 16:35:01
+ * @LastEditTime: 2024-12-07 17:17:25
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
   <div>
     <TheNavbar />
     <div class="about-container">
-      <h1>关于我们</h1>
-      <p>这里是关于我们的页面内容。</p>
+      <h1>关于我</h1>
+      <p>“世上没有低级的法术，只有低级的法师。” 
+        <br><span class="quote-author">—— 《底牌》</span></p>
       <nuxt-link to="/" class="back-home-button">回到主页</nuxt-link>
     </div>
   </div>
@@ -40,6 +41,12 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 2rem;
+}
+
+.quote-author {
+  display: block;
+  text-align: right;
+  margin-right: 220px;
 }
 
 .back-home-button {

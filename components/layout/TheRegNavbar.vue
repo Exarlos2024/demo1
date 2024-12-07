@@ -10,7 +10,7 @@
     <div class="nav-content">
       <div class="left-nav">
         <nuxt-link to="/">
-          <img src="/images/githublogo.png" alt="Logo" class="logo" />
+          <img src="/images/Exarlos.png" alt="Logo" class="logo" />
         </nuxt-link>
         <nuxt-link to="/" class="nav-link">回到主页</nuxt-link>
         <nuxt-link to="/about" class="nav-link">关于</nuxt-link>

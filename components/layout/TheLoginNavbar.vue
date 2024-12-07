@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 14:29:27
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 14:52:40
+ * @LastEditTime: 2024-12-07 17:10:39
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
@@ -10,7 +10,7 @@
     <div class="nav-content">
       <div class="left-nav">
         <nuxt-link to="/">
-          <img src="/images/githublogo.png" alt="Logo" class="logo" />
+          <img src="/images/Exarlos.png" alt="Logo" class="logo" />
         </nuxt-link>
         <nuxt-link to="/" class="nav-link">回到主页</nuxt-link>
         <nuxt-link to="/about" class="nav-link">关于</nuxt-link>
