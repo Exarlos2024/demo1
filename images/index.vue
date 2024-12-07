@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 01:05:47
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 01:05:51
+ * @LastEditTime: 2024-12-07 12:45:45
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 
@@ -386,14 +386,13 @@ li:hover {
 
 /* Hero 部分基础样式 */
 .hero-section {
-  background: linear-gradient(180deg, #040d21 0%, #0c162d 100%);
+  position: relative;
   padding: 80px 16px;
   min-height: calc(100vh - 64px);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
   overflow: hidden;
 }
 
@@ -405,6 +404,7 @@ li:hover {
   right: 0;
   bottom: 0;
   overflow: hidden;
+  background: linear-gradient(180deg, rgb(13, 17, 54) 0%, rgb(58, 45, 113) 100%);
 }
 
 .star-field {
@@ -499,6 +499,7 @@ li:hover {
   margin-left: auto;
   margin-right: auto;
   background: linear-gradient(120deg, #fff, #88ccff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: titleGlow 3s ease-in-out infinite;
