@@ -2,15 +2,19 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 00:30:48
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 23:38:21
+ * @LastEditTime: 2024-12-08 14:38:38
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
   <nav class="main-nav">
     <div class="nav-content">
       <div class="left-nav">
+        <div class="logo-hint">
+          主页请点击 <span class="arrow">→</span>
+        </div>
         <nuxt-link to="/">
-          <img src="/images/Exarlos.png" alt="Logo" class="logo" />
+          <img src="/images/logo2.png" alt="Logo" class="logo" />
+          <!-- <img src="/images/sibuleisi.jpg" alt="Logo" class="logo" /> -->
         </nuxt-link>
         <UDropdown
           v-for="menu in navMenus"
@@ -55,11 +59,32 @@ import { navMenus } from "~/constants/navigation";
 </script>
 
 <style scoped>
-/* 移除通用样式，保留特定样式 */
+.main-nav {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 0.5rem 8rem;
+}
+
+.nav-content {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
 .right-nav {
   display: flex;
-  gap: 8px;
+  gap: 1rem;
   align-items: center;
+  margin-left: auto;
 }
 
 .sign-in-button,
@@ -96,11 +121,74 @@ import { navMenus } from "~/constants/navigation";
   color: #24292f !important;
 }
 
-/* 响应式设计 */
-@media (max-width: 768px) {
+/* 响应式设计调整 */
+@media (max-width: 1400px) {
+  .main-nav {
+    padding: 0.5rem 6rem;
+  }
+  
   .nav-content {
-    flex-direction: column;
-    gap: 1rem;
+    padding: 0 8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-nav {
+    padding: 0.5rem 4rem;
+  }
+  
+  .nav-content {
+    padding: 0 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    padding: 0.5rem 2rem;
+  }
+  
+  .nav-content {
+    padding: 0 3rem;
+  }
+  
+  .left-nav, .right-nav {
+    gap: 2rem;
+  }
+}
+
+.logo-hint {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 18px;
+  animation: pointRight 1s infinite;
+}
+
+@keyframes pointRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .logo-hint {
+    display: none; /* 在移动端隐藏提示文字 */
   }
 }
 </style>

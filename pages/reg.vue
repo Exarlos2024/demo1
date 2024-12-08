@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 13:29:24
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 18:52:29
+ * @LastEditTime: 2024-12-08 13:31:19
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
@@ -24,6 +24,11 @@
             <input type="password" id="password" v-model="form.password" required />
           </div>
           <button type="submit" class="submit-button">注册</button>
+          <div class="form-footer">
+            <NuxtLink to="/login" class="login-link">
+              已有账号？点击登录
+            </NuxtLink>
+          </div>
         </form>
       </div>
     </div>
@@ -116,5 +121,24 @@ const handleSubmit = () => {
 .submit-button:hover {
   background-color: #5a67d8;
   transform: translateY(-2px);
+}
+
+.form-footer {
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.login-link {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #174ea6;
+  text-decoration: underline;
 }
 </style> 

@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 12:20:35
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 12:38:56
+ * @LastEditTime: 2024-12-08 12:03:31
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
@@ -12,7 +12,7 @@
     <div class="hero-container">
       <h1 class="hero-title">
         大连市甘井子区卫生健康局<br>
-        信息化办公平台
+        数据中心
       </h1>
       <p class="hero-description">
         Think different
@@ -20,6 +20,8 @@
       
       <!-- 引入 CTA 按钮组件 -->
       <HeroCTA />
+      <!-- 添加轮播图组件 -->
+      <HeroCarousel />
     </div>
   </section>
 </template>
@@ -27,6 +29,7 @@
 <script setup>
 import HeroBackground from '~/components/HeroBackground.vue'
 import HeroCTA from '~/components/HeroCTA.vue'
+import HeroCarousel from '~/components/HeroCarousel.vue'
 </script>
 
 <style scoped>

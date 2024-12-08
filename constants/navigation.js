@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 00:31:43
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 23:55:51
+ * @LastEditTime: 2024-12-08 13:47:37
  * @Description: 世界上没有低级的法术,只有低级的法师!
  */
 export const navMenus = [
@@ -63,7 +63,7 @@ export const navMenus = [
         {
           label: "Profile",
           avatar: {
-            src: "https://avatars.githubusercontent.com/u/739984?v=4",
+            src: "/images/Exarlos2.png",
           },
         },
       ],

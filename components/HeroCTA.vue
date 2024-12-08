@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-07 12:24:36
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 12:58:50
+ * @LastEditTime: 2024-12-08 13:25:37
  * @Description: 世界上没有低级的法术,只有低级的法师!
 -->
 <template>
@@ -35,6 +35,7 @@ function goToTest() {
 
 function startUsing() {
   // 处理“开始使用”按钮的逻辑
+  router.push('/login')
 }
 </script>
 

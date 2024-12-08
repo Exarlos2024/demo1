@@ -2,7 +2,7 @@
  * @Author: Exarlos
  * @Date: 2024-12-05 15:36:51
  * @LastEditors: Exarlos
- * @LastEditTime: 2024-12-07 23:06:11
+ * @LastEditTime: 2024-12-08 14:47:42
  * @Description: 世界上没有低级的法术,只有低级的法师!
  */
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -29,5 +29,10 @@ export default defineNuxtConfig({
         }
       ]
     }
+  },
+  typescript: {
+    strict: true,
+    typeCheck: false,
+    shim: false
   }
 })
